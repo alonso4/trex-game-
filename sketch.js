@@ -42,19 +42,19 @@ function setup(){
   trex.addAnimation("collied",trexCollided);
   edges = createEdgeSprites();
   
-  ground=createSprite(200,180,400,20);
+  ground=createSprite(width/2,height/2,400,20);
   ground.addImage(groundImage);
   //agregar tamaño y posición al Trex
   trex.scale = 0.5;
   trex.x = 50
 
-  invisibleGround=createSprite(200,185,400,10);
+  invisibleGround=createSprite(width/2,height/2,width,10);
   invisibleGround.visible=false;
   obstaclesGroup=new Group();
   claudsGroup=new Group();
   trex.setCollider("circle",0,0,40);
   trex.debug=false;
-  gameOver = createSprite(500,100);
+  gameOver = createSprite(width/2,height/2);
   gameOver.addImage(gameOverimg);
   gameOver.visible=false;
   restart = createSprite(500,150);
