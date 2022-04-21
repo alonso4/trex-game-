@@ -73,7 +73,7 @@ function draw(){
   if(ground.x<0){
     ground.x=ground.width/2;
       }
-      if(touches.length<0||keyDown("space")&&trex.y>3*height/7){
+      if((touches.length<0||keyDown("space"))&&trex.y>3*height/7){
         trex.velocityY = -10;
         jumpSound.play();
         touches=[];
