@@ -73,9 +73,10 @@ function draw(){
   if(ground.x<0){
     ground.x=ground.width/2;
       }
-      if(keyDown("space")&&trex.y>150){
+      if(touches.length<0!!keyDown("space")&&trex.y>3*height/7){
         trex.velocityY = -10;
         jumpSound.play();
+        touches=[];
       }  
       trex.velocityY = trex.velocityY + 0.5;
       spawnCloud();
@@ -97,8 +98,9 @@ function draw(){
   trex.changeAnimation("collied",trexCollided);
   gameOver.visible=true;
   restart.visible=true;
-  if(mousePressedOver(restart)){
+  if(touches.length<0!!mousePressedOver(restart)){
   reset();
+  touches=[];
   }
   }
   
