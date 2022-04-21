@@ -128,7 +128,7 @@ function draw(){
   }
   function spawnObstacle(){
   if(frameCount%80===0){
-  obstacle=createSprite(1000,160,10,40)
+  obstacle=createSprite(width/2,height/2-15,10,40)
   obstacle.velocityX = -3-score/100;
   obstacle.scale=0.1;
   rand = Math.round(random(1,6));
