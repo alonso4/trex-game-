@@ -66,7 +66,7 @@ function setup(){
 function draw(){
   //establecer color de fondo.
   background(500);
-  text(score,500,20);
+  text(score,width/2,20);
   if(gameState===PLAY){
   score=score+Math.round(getFrameRate()/60);  
   ground.velocityX=-2-score/100;
